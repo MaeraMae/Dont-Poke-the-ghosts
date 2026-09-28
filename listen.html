@@ -30,15 +30,23 @@
   <header class="page-header">
     <span class="eyebrow">50 States &middot; 50 Entities</span>
     <h1>Listen</h1>
-    <p class="lede">Every episode, browsable by state and cryptid. Recordings are still in production — this is the full directory, ready for audio the moment it lands.</p>
+    <p class="lede">Every episode, browsable by state and cryptid. Season one is rolling out now — press play below, or browse the full 50-state lineup.</p>
   </header>
 
   <section>
     <div class="container">
 
-      <div class="notice-banner">
-        <span style="font-size:1.4rem;">🎙️</span>
-        <div><strong>Audio is coming soon.</strong> We're recording season one now — this page will fill in with real episode players state by state. For now, here's the full lineup.</div>
+      <div class="player-panel" id="player">
+        <div class="player-head">
+          <span class="eyebrow">Now Playing</span>
+          <h2>Season One</h2>
+          <p>New episodes land here as they're recorded, one state at a time. Pick an episode from the list in the player.</p>
+        </div>
+        <div class="player-frame">
+          <iframe id="scPlayer" title="Don't Poke the Ghosts on SoundCloud" width="100%" height="450" scrolling="no" frameborder="no" loading="lazy" allow="autoplay; encrypted-media"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2306115693&amp;color=%2350c878&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=true"></iframe>
+        </div>
+        <p class="player-credit"><a href="https://soundcloud.com/dontpoketheghosts/sets/dont-poke-the-ghosts" target="_blank" rel="noopener">Listen on SoundCloud &rarr;</a></p>
       </div>
 
       <div class="filter-bar">
@@ -51,7 +59,7 @@
         <h3>The White Thang</h3>
         <p class="teaser">Billy Ray swears something massive, white, and smelling like death has been lurking near his property for weeks.</p>
         <p style="color:var(--ink-dim); font-size:.82rem; margin-bottom:.3rem;">Also in this episode: Hell&#x27;s Gate Bridge &amp; Dead Children&#x27;s Playground &amp; Boyington Oak</p>
-        <span class="play-pill">&#9654; Audio coming soon</span>
+        <a class="play-pill live" href="#player" data-sc-match="alabama">&#9654; Listen now</a>
       </div>
       <div class="card ep-card" data-search="alaska the iliamna lake monster pete has flown over lake iliamna hundreds of times. he knows what a beluga looks like from the air. this was not a beluga.">
         <span class="ep-num">Episode 02 &middot; Alaska</span>
@@ -416,6 +424,7 @@
   </footer>
 
   <script src="js/nav.js"></script>
+  <script src="https://w.soundcloud.com/player/api.js"></script>
   <script src="js/listen.js"></script>
 </body>
 </html>
